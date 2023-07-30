@@ -2,6 +2,7 @@ import json
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
 from naive_bayes_response import nbAnswer
+from lstm_response import lstmAnswer
 
 class MyRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -19,7 +20,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             if(reqt['question']!=''):
                 if(reqt['algorithm']=='LSTM'):
-                    data['response'] = 'LSTM Answer'
+                    data['response'] = lstmAnswer(reqt['question'])
                 else:
                     data['response'] = nbAnswer(reqt['question'])
             else:
