@@ -17,7 +17,6 @@ class MyRequestHandler(BaseHTTPRequestHandler):
 
         data = {}
         if(filename=='answer'):
-            self.send_response(200)
             if(reqt['question']!=''):
                 if(reqt['algorithm']=='LSTM'):
                     data['response'] = lstmAnswer(reqt['question'])
@@ -26,12 +25,15 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             else:
                 data['response'] = ""
         else:
-            self.send_response(404)
             data['response'] = "File Not Found!" 
 
         resp = json.dumps(data)
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         self.send_header('Content-type', 'application/json')
-        self.end_headers()        
+        self.end_headers()       
         self.wfile.write(resp.encode('utf-8'))
 
 def run_server(port=8080):
