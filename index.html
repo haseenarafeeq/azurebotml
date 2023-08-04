@@ -29,8 +29,8 @@
             </div>
             <div class="chat-footer">
                 <grammarly-editor-plugin 
-                config.autocomplete="on"
-                config.autocorrect="on">
+                
+                >
                     <input class="chat-input" id="chat-input" type="text" placeholder="Type your message"
                       />
                   </grammarly-editor-plugin>
@@ -44,7 +44,7 @@
         </div>
         <div class="chat-container" style="margin-left: 1%;">
             <div class="chat-header">
-                Chat Box Naive_Bayes
+                Chat Box Naïve bayes
             </div>
             <div class="chat-body-1" id="chat-body-1">
 
@@ -74,6 +74,7 @@
     <script>
 
         let lstm = false;
+        let question = '';
         const chatboxElement = document.querySelector('#chat-body');
         const chatboxElement1 = document.querySelector('#chat-body-1');
         const userInputElement = document.querySelector('#chat-input');
@@ -84,9 +85,9 @@
             try {
                 let answer;
                 const url =
-                    'https://uollanguageresource.cognitiveservices.azure.com/language/:query-knowledgebases';
-                const subscriptionKey = 'f04c05031b6e44af9f2767775ec08676';
-                const projectName = 'BOTPROJECT';
+                    'https://uolbotlanguage.cognitiveservices.azure.com/language/:query-knowledgebases';
+                const subscriptionKey = 'e6b83b3e7d4648fa92577f5d2d166c91';
+                const projectName = 'uolbotproject';
                 const apiVersion = '2021-10-01';
                 const deploymentName = 'production';
 
@@ -108,8 +109,8 @@
         }
         async function getIntents(query) {
             const url =
-                'https://uollanguageresource.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2022-10-01-preview';
-            const subscriptionKey = 'f04c05031b6e44af9f2767775ec08676';
+                'https://uolbotlanguage.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2022-10-01-preview';
+            const subscriptionKey = 'e6b83b3e7d4648fa92577f5d2d166c91';
             const requestId = '4ffcac1c-b2fc-48ba-bd6d-b69d9942995a';
 
             const headers = {
@@ -220,7 +221,7 @@
                     lstm = true;
                     userMessage = userInputElement.value;
                 }
-
+                question = userMessage;
                 addMessage(userMessage, 'user-message');
                 if (!lstm) userInputElement1.value = '';
                 else userInputElement.value = '';
@@ -248,13 +249,14 @@
                 lstm = true;
                 userMessage = userInputElement1.value;
             }
+            question = userMessage;
             addMessage(userMessage, 'user-message');
             if (!lstm) userInputElement1.value = '';
             else userInputElement.value = '';
             getIntents(userMessage).
             then(async res => {
-                console.log(res,'response inted');
-                if (res === 'not_related_to_darulhuda') {
+                console.log(res,'response intend');
+                if (res === 'Not-related-to-UniversityOfLincoln') {
                     let message =
                         "To answer this question is beyond my ability.please visit https://www.lincoln.ac.uk";
                     addMessage(message, 'bot-message');
@@ -292,13 +294,34 @@
                 .then(response => {
                     console.log(response.data.answers);
                     let answer = response.data.answers[0].answer;
-                    addMessage(answer, 'bot-message');
+                    console.log(answer)
+                    if(answer === 'please visit https://www.lincoln.ac.uk for more info about university') {
+                        let algorithm = lstm ? 'LSTM':null
+                        getMlResponse(question,algorithm)
+                    } else {
+                        addMessage(answer, 'bot-message');
+                    }
+                    
                 })
                 .catch(error => {
                     console.error(error);
                 });
         }
 
+        function getMlResponse(question,algorithm) {
+            axios.get(
+                    `http://localhost:8080/answer?question=${question}&algorithm=${algorithm}`,
+                   )
+                .then(data => {
+                    console.log(data.data.response);
+                    let answer = data.data.response;
+                    addMessage(answer, 'bot-message');
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+  
         function getSpeechText() {
             // Check if the browser supports the Web Speech API
             isLSTM = false;
@@ -358,6 +381,5 @@
     
 </body>
 
-<!-- Mirrored from www.ansonika.com/atena/horizontal_nav/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Jun 2023 09:32:04 GMT -->
 
 </html>

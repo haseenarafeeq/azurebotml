@@ -1348,6 +1348,336 @@
             ]
           },
           {
+            "text": "What are the admission requirements for the Computer Science program at the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you tell me the application deadline for the Business Management course?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Is there any entrance exam for the Engineering program at the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How can I apply for a scholarship at the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What documents do I need to submit for the admission process?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "I'm an international student. Are there any additional requirements for my application?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you give me an overview of the admission process for postgraduate courses?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Is there a minimum GPA requirement for admission to the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Are there any interviews or portfolio submissions required for the Fine Arts program?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },{
+            "text": "What are the English language proficiency requirements for international students?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you provide information about the acceptance rate at the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Are there any specific prerequisites for the Psychology program?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How long does it usually take to receive an admission decision?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Is it possible to transfer credits from another university to the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "I'm interested in studying part-time. What are the options for part-time admission?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Are there any special considerations for mature students during the admission process?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Where can I find the online application form for the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you provide information about the fees and tuition for my desired program?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What is the process for deferring my admission to the next academic year?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "I've been accepted! What are the next steps I need to follow to enroll at the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you tell me about the available undergraduate majors and programs at the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the GPA requirements for different programs in the Faculty of Health and Life Sciences?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Do I need to submit letters of recommendation for my application?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Are there any specific admission requirements for the Law School?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "I'm an international student. How do I apply for a student visa after getting accepted?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Is there an early decision option for high school seniors applying to the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the admission criteria for the Nursing program?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "I have a gap year. How does that affect my application?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the prerequisites for the Veterinary Science program?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Is there an application fee, and how can I pay it?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Are there any special scholarships or financial aid opportunities for incoming freshmen?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How can I check the status of my application?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you explain the process of transferring to the University of Lincoln from another university?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What is the average SAT/ACT score for successful applicants?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Is it possible to change my major after I've been admitted?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you tell me about the accommodation options for first-year students?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "I have some college credits from a different country. Will they be considered during the admission evaluation?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Are there any specific requirements for the Architecture program portfolio?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you provide information on the admission process for the Master's in International Relations program?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Is there an orientation program for new students at the University of Lincoln?",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "about the university",
+            "language": "en",
+            "intent": "related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+
+
+          {
             "text": "Where is the location of University of Hull?",
             "language": "en",
             "intent": "Not-related-to-UniversityOfLincoln",
@@ -1586,8 +1916,6 @@
               
             ]
           }
-          
-        
       ]
     }
   }
