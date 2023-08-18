@@ -8,7 +8,7 @@
       },
       "projectName": "UniversityOfLincolnChatBot",
       "multilingual": false,
-      "description": "This is a  project as part of msc course which will answer all the queries related to postgraduate course at university of lincoln,UK",
+      "description": "This is a  project as part of msc course which will answer all the queries related to admission,course details, faculty information and location for postgraduate studies at university of lincoln,UK",
       "language": "en"
     },
     "assets": {
@@ -19,9 +19,6 @@
         },
         {
             "category": "Not-related-to-UniversityOfLincoln"
-        },
-        {
-            "category":"related-ButNotDirectly"
         },
         
         {
@@ -36,20 +33,12 @@
           "category": "Uol_entity_faculty"
         },
         {
-          "category": "Uol_entity_department"
+          "category": "Uol_entity_admission"
         },
         {
-          "category": "Uol_entity_club"
+          "category": "Uol_entity_location"
         },
-        {
-          "category": "Uol_entity_alumni"
-        },
-        {
-          "category": "Uol_entity_research_center"
-        },
-        {
-          "category": "Uol_entity_publication"
-        },
+        
         {
           "category": "Uol_entity_greetings"
         }
@@ -80,13 +69,48 @@
           ]
         },
         {
+          "text": "where is the location of  Lincoln University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            {
+              "category": "Uol_entity_location",
+              "offset": 14,
+              "length": 8
+            }
+          ]
+        },
+        {
+          "text": "what are the admission process at  Lincoln University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            {
+              "category": "Uol_entity_admission",
+              "offset": 14,
+              "length": 9
+            }
+          ]
+        },
+        {
           "text": "What academic departments does Lincoln University offer?",
           "intent": "related-to-UniversityOfLincoln",
           "entities": [
             {
-              "category": "Uol_entity_department",
+              "category": "Uol_entity_course",
               "offset": 16,
               "length": 11
+            }
+          ]
+        },
+        {
+          "text": "hello university of lincoln ",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            {
+              "category": "Uol_entity_greetings",
+              "offset": 0,
+              "length": 5
             }
           ]
         },
@@ -94,45 +118,1925 @@
           "text": "What student clubs are there at University?",
           "language": "en",
           "intent": "related-to-UniversityOfLincoln",
-          "entities": [
-            {
-              "category": "Uol_entity_club",
-              "offset": 6,
-              "length": 5
-            }
-          ]
+          "entities": []
+          
         },
         {
           "text": "Who are some of the alumni of University of lincoln?",
           "intent": "related-to-UniversityOfLincoln",
           "entities": [
-            {
-              "category": "Uol_entity_alumni",
-              "offset": 21,
-              "length": 30
-            }
+            
           ]
         },
         {
           "text": "What research centers are there at University of Lincoln?",
           "intent": "related-to-UniversityOfLincoln",
           "entities": [
-            {
-              "category": "Uol_entity_research_center",
-              "offset": 6,
-              "length": 51
-            }
+            
           ]
         },
         {
           "text": "What publications has Lincoln University produced?",
           "intent": "related-to-UniversityOfLincoln",
           "entities": [
-            {
-              "category": "Uol_entity_publication",
-              "offset": 24,
-              "length": 12
-            }
+            
+          ]
+        },
+        {
+          "text": "Can you provide information about University of Lincoln in UK?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you guide me to the Minerva Building (MB)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where can I find the Alfred Tennyson Building (ATB)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Could you show me the Stephen Langton Building (SLB) location?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "I'm looking for Bridge House (BH). Can you help?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "How do I get to the Janet Lane-Claypon Building (JLC)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you provide information about University of Lincoln including its academic programs and campus facilities?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where's the Nicola de la Haye Building (NDH) situated?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you provide directions to the Peter de Wint Building (PDW)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you show me the way to the student union?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "How do I get to the university library?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where can I locate the Sarah Swift Building (SSB)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you guide me to the Joseph Banks Laboratories (JBL)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "How do I find the David Chiddick Building (DCB)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where's the Ross Lucas Medical Sciences Building (LMS)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Could you point me to the Isaac Newton Building (INB)?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Could you provide directions to One Campus Way?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "I'm looking for the Village Hall. Can you help?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "How can I find The Swan on campus?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where's the Student Well Being Center situated?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you guide me to the Doctors Health Service?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where's the sports center located on campus?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where is the  location ?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "teachers information please",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "tecahers who teaches at university of Lincoln",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the admission requirements for the Computer Science program at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you tell me the application deadline for the Business Management course?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Is there any entrance exam for the Engineering program at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "How can I apply for a scholarship at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What documents do I need to submit for the admission process?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "I'm an international student. Are there any additional requirements for my application?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you give me an overview of the admission process for postgraduate courses?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Is there a minimum GPA requirement for admission to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Are there any interviews or portfolio submissions required for the Fine Arts program?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },{
+          "text": "What are the English language proficiency requirements for international students?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you provide information about the acceptance rate at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Are there any specific prerequisites for the Psychology program?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "How long does it usually take to receive an admission decision?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Is it possible to transfer credits from another university to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "I'm interested in studying part-time. What are the options for part-time admission?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Are there any special considerations for mature students during the admission process?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where can I find the online application form for the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you provide information about the fees and tuition for my desired program?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What is the process for deferring my admission to the next academic year?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "I've been accepted! What are the next steps I need to follow to enroll at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you tell me about the available undergraduate majors and programs at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the GPA requirements for different programs in the Faculty of Health and Life Sciences?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Do I need to submit letters of recommendation for my application?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Are there any specific admission requirements for the Law School?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "I'm an international student. How do I apply for a student visa after getting accepted?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Is there an early decision option for high school seniors applying to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the admission criteria for the Nursing program?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "I have a gap year. How does that affect my application?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the prerequisites for the Veterinary Science program?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Is there an application fee, and how can I pay it?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Are there any special scholarships or financial aid opportunities for incoming freshmen?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "How can I check the status of my application?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you explain the process of transferring to the University of Lincoln from another university?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What is the average SAT/ACT score for successful applicants?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Is it possible to change my major after I've been admitted?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you tell me about the accommodation options for first-year students?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "I have some college credits from a different country. Will they be considered during the admission evaluation?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Are there any specific requirements for the Architecture program portfolio?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you provide information on the admission process for the Master's in International Relations program?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Is there an orientation program for new students at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "about the university",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you provide information about the research opportunities and notable faculty at University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Which universities offer renowned programs in environmental science and have notable alumni in the field?",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Tell me about the universities with strong programs in psychology and their influential alumni in the field.",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Tell me about the universities known for their strong programs in architecture and their notable architectural landmarks.",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you provide information about the admission requirements and application process at University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the different types of policies that I should be aware of as a student at your university?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the different types of resources that are available to help me succeed at your university?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What is the student-to-faculty ratio at your university?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What is the average class size at your university?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What is the graduation rate for your university?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the courses there?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the courses",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "course details please",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "course offered at university of lincoln",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the most popular graduate programs at University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": []
+        },
+        
+        
+        {
+          "text": "What are the extracurricular activities available at University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": []
+        },
+        {
+          "text": "What are the admission requirements for University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": []
+        },
+        
+       
+        {
+          "text": "What is the campus life like at University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": []
+        },
+        
+       
+        {
+          "text": "What are the research strengths of University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What are the notable alumni University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+      
+      
+        {
+          "text": "What is the cost of attendance at University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What is the location of University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "What is the location of University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "list of courses",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "list of courses offered",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "list of courses offered in",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "what are the courses offered in your college?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "courses offered",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "courses offered in university of Lincoln",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+            
+          ]
+        },
+        {
+          "text": "courses you offer",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "branches available at your college?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "what are branches?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "what are the courses available?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "what are the branches available?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "can you tell me the courses available?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "can you tell me the branches available?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Msc Computer science",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Msc Cloud Computing",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Mechanical engineering",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Civil Engineering",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "medicine course at your college",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": " How can I apply for admission to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": " How do I submit my application for a program at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "  What documents do I need for admission to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the deadlines for applying to the University of Lincoln.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I check the status of my application to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about admission interviews at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How can I contact the admissions office at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": " What scholarships are available for students at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": " How can I apply for financial aid at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I provide proof of English language proficiency for admission to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I cancel my application to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How can I check if my previous coursework meets the prerequisites for a program at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I access the online application portal for the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+       
+        {
+          "text": "Who are the faculty members in the Computer Science department?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members in the Computer Science department at university of lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide a list of professors in the Psychology faculty?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide a list of professors in the Psychology faculty at university of lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the research interests of the faculty in the Business School.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the research interests of the faculty in the Business School at university of lincoln",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How many faculty members are there in the Engineering department?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How many faculty members are there in the Engineering department at university of lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who is the head of the Law faculty at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who is the head of the Law faculty at the University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about the qualifications of the faculty in the Health Sciences department?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about the qualifications of the faculty in the Health Sciences department at university of lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the expertise of the professors in the Media and Communication school.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the leading researchers in the Art and Design faculty?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How diverse is the faculty composition in terms of international backgrounds?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide a brief biography of the dean of the Social Sciences faculty?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty's involvement in community outreach programs.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty advisors for the Computer Animation program?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide details about the teaching experience of the faculty in the Education department?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about any recent publications by the faculty in the Literature and Languages faculty.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "What is the faculty's approach to incorporating real-world experience into the curriculum?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the industry professionals that are part of the faculty in the Business Management program?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about the faculty's collaborations with other universities or institutions?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty members' involvement in student clubs and organizations.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "What is the faculty's approach to mentoring and supporting students in their academic journey?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members conducting research in the field of Artificial Intelligence?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide a list of faculty members who have received awards or recognitions?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty's participation in conferences and academic events",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "What is the faculty's approach to promoting collaborative research projects among students?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "What is the faculty's stance on interdisciplinary collaboration across different departments?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about faculty members who are available for research collaborations?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty's contributions to the local community through their expertise.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "What research projects are currently being led by the faculty in the Chemistry department?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty advisors for students pursuing a degree in International Relations?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide details about the faculty's involvement in industry partnerships?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty's approach to integrating practical skills into the curriculum.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members that have been recognized for their contributions to sustainability initiatives?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about the faculty's engagement in global research collaborations?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty members' commitment to promoting diversity and inclusion.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their expertise in the field of Robotics?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide details about the faculty's involvement in policy-making discussions?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about faculty members who have received grants for their research projects.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members leading the Human Rights and Social Justice initiatives?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about faculty members who have been featured in media or news outlets at univesrsity of lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty's contributions to public lectures and seminars at university of lincoln.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty advisors for students interested in pursuing a career in Architecture at university of lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide details about the faculty's engagement in interdisciplinary research centers at university of lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty members' involvement in community service projects.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members leading research projects in Renewable Energy?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about the faculty's role in curriculum development and updates?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty members' engagement in international research collaborations.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their contributions to Environmental Conservation?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide details about the faculty's engagement in public policy discussions?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty advisors for students interested in pursuing a degree in Digital Media?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about faculty members who are part of professional associations?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty members' contributions to academic journals and publications.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members leading research initiatives in Data Science?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty members' involvement in mentoring student research projects.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members leading initiatives related to Sustainable Development?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their contributions to Biomedical Research?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide details about the faculty's engagement in community outreach projects?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty advisors for students interested in pursuing a degree in Economics?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their expertise in the field of Biotechnology?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their expertise in the field of cloud computing",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their expertise in the field of Business studies",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their expertise in the field of education",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their expertise in the field of digital communication",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their expertise in the field of mechanical engineering",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty members known for their expertise in the field of medicine",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty advisors for students interested in pursuing a degree in Journalism?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the faculty members' contributions to policy advocacy and implementation.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty advisors for students interested in pursuing a degree in Criminology?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Who are the faculty advisors for students interested in pursuing a degree in vetenary",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you provide information about the faculty's engagement in research grant applications?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        
+        {
+          "text": "What's the application fee for undergraduate programs at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I submit letters of recommendation for admission to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I update my contact information on my application for the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How can I apply for a visa to study at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "What's the timeline for receiving admission decisions from the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "What's the timeline for receiving admission decisions from uiversity",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I pay the tuition deposit after receiving an offer from the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Can you guide me on the process of transferring credits",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I appeal an admission decision from the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How do I appeal an admission decision from the University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Tell me about the orientation programs for new students at the University of Lincoln.",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "How can I apply for graduate assistantships at the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        
+        {
+          "text": "MA education",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "International Business",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {        
+          "text": "Who are the faculty advisors for students interested in pursuing a degree in Journalism at hull university",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": []
+        },
+      
+          {
+            "text": "Who are the professors teaching Physics at Harvard University?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Tell me about the faculty members in the Mathematics department at Stanford University.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "What research projects are being conducted by the faculty in the Computer Science department at MIT?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Can you provide details about the qualifications of the professors in the Business School at Yale University?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Tell me about the faculty-to-student ratios in the Medical School at Johns Hopkins University.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Who is leading the research initiatives in Environmental Studies at UC Berkeley?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "How diverse is the faculty composition in terms of international backgrounds at University of Toronto?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Tell me about faculty members' involvement in community outreach programs at University of Melbourne.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "What initiatives does the faculty undertake to bridge the gap between academia and industry at Caltech?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Who are the industry professionals that are part of the faculty in the Media and Communication school at NYU?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+                
+        {        
+          "text": "who are taking msc cloud computing at oxford university",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": []
+        },
+        {        
+          "text": "who is taking for msc computer science at leicester university",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": []
+        },
+        {        
+          "text": "tell me the faculty information at birmingham university",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": []
+        },
+        {        
+          "text": "tell me the faculty who are involved in resarch at east london university",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": []
+        },
+
+          {
+            "text": "Who are the professors teaching Biology at Oxford University?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Tell me about the faculty members in the Economics department at Cambridge University.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "What research projects are being conducted by the faculty in the Physics department at Stanford University?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Can you provide details about the qualifications of the professors in the Business School at MIT?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Tell me about the faculty-to-student ratios in the Medical School at Harvard University.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Who is leading the research initiatives in Computer Science at Caltech?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "How diverse is the faculty composition in terms of international backgrounds at University of Derby?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Tell me about faculty members' involvement in community outreach programs at University of Northumbria University.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "What initiatives does the faculty undertake to bridge the gap between academia and industry at Princeton University?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": "Who are the industry professionals that are part of the faculty in the Media and Communication school at Kingston University?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": " Who are the faculty advisors for students interested in pursuing a degree in Psychology at university of heriot watt",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+          {
+            "text": " Can you provide details about the faculty's engagement in industry advisory boards at kingston university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": []
+          },
+         
+          
+
+        {
+          "text": "Where is the location of University of Hull?",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": []
+        },
+        {
+          "text": "Tell me about the universities known for their strong programs in computer engineering and their notable alumni in the field.",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where is the location of University of sheffield?",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Where is the location of University of east london?",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": " location ?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "exact location?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Can you provide information about the student life and extracurricular activities at University ?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "Which universities offer renowned programs in economics and have notable alumni in the field of finance?",
+          "language": "en",
+          "intent": "Not-related-to-UniversityOfLincoln",
+          "entities": [
+            
           ]
         },
         {
@@ -1167,14 +3071,7 @@
             "intent": "Not-related-to-UniversityOfLincoln",
             "entities": []
           },
-          {
-            "text": "Can you provide information about University of Lincoln in UK?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
+          
           {
             "text": "Which universities have renowned journalism programs and notable alumni in the field?",
             "language": "en",
@@ -1198,14 +3095,7 @@
               
             ]
           },
-          {
-            "text": "Can you provide information about Darul Huda University in Chemmad, including its academic programs and campus facilities?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
+          
           {
             "text": "Which universities offer renowned medical programs and have notable alumni in the field of healthcare?",
             "language": "en",
@@ -1230,118 +3120,7 @@
               
             ]
           },
-          {
-            "text": "Can you provide information about the research opportunities and notable faculty at University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Which universities offer renowned programs in environmental science and have notable alumni in the field?",
-            "language": "en",
-            "intent": "Not-related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Tell me about the universities with strong programs in psychology and their influential alumni in the field.",
-            "language": "en",
-            "intent": "Not-related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Tell me about the universities known for their strong programs in architecture and their notable architectural landmarks.",
-            "language": "en",
-            "intent": "Not-related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you provide information about the admission requirements and application process at University?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the different types of policies that I should be aware of as a student at your university?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the different types of resources that are available to help me succeed at your university?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What is the student-to-faculty ratio at your university?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What is the average class size at your university?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What is the graduation rate for your university?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the courses there?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the courses",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "course details please",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "course offered at university of lincoln",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
+         
           {
             "text": "course offered at university of birmingham",
             "language": "en",
@@ -1375,406 +3154,7 @@
               
             ]
           },
-          {
-            "text": "Where is the  location ?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the admission requirements for the Computer Science program at the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you tell me the application deadline for the Business Management course?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Is there any entrance exam for the Engineering program at the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "How can I apply for a scholarship at the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What documents do I need to submit for the admission process?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "I'm an international student. Are there any additional requirements for my application?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you give me an overview of the admission process for postgraduate courses?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Is there a minimum GPA requirement for admission to the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Are there any interviews or portfolio submissions required for the Fine Arts program?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },{
-            "text": "What are the English language proficiency requirements for international students?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you provide information about the acceptance rate at the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Are there any specific prerequisites for the Psychology program?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "How long does it usually take to receive an admission decision?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Is it possible to transfer credits from another university to the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "I'm interested in studying part-time. What are the options for part-time admission?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Are there any special considerations for mature students during the admission process?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Where can I find the online application form for the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you provide information about the fees and tuition for my desired program?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What is the process for deferring my admission to the next academic year?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "I've been accepted! What are the next steps I need to follow to enroll at the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you tell me about the available undergraduate majors and programs at the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the GPA requirements for different programs in the Faculty of Health and Life Sciences?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Do I need to submit letters of recommendation for my application?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Are there any specific admission requirements for the Law School?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "I'm an international student. How do I apply for a student visa after getting accepted?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Is there an early decision option for high school seniors applying to the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the admission criteria for the Nursing program?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "I have a gap year. How does that affect my application?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the prerequisites for the Veterinary Science program?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Is there an application fee, and how can I pay it?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Are there any special scholarships or financial aid opportunities for incoming freshmen?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "How can I check the status of my application?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you explain the process of transferring to the University of Lincoln from another university?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What is the average SAT/ACT score for successful applicants?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Is it possible to change my major after I've been admitted?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you tell me about the accommodation options for first-year students?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "I have some college credits from a different country. Will they be considered during the admission evaluation?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Are there any specific requirements for the Architecture program portfolio?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you provide information on the admission process for the Master's in International Relations program?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Is there an orientation program for new students at the University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "about the university",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-
-
-
-          {
-            "text": "Where is the location of University of Hull?",
-            "language": "en",
-            "intent": "Not-related-to-UniversityOfLincoln",
-            "entities": []
-          },
-          {
-            "text": "Tell me about the universities known for their strong programs in computer engineering and their notable alumni in the field.",
-            "language": "en",
-            "intent": "Not-related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Where is the location of University of sheffield?",
-            "language": "en",
-            "intent": "Not-related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Where is the location of University of east london?",
-            "language": "en",
-            "intent": "Not-related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": " location ?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "exact location?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Can you provide information about the student life and extracurricular activities at University ?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Which universities offer renowned programs in economics and have notable alumni in the field of finance?",
-            "language": "en",
-            "intent": "Not-related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
+         
           {
             "text": "Tell me about the universities with strong programs in visual arts and their renowned alumni in the field of fine arts.",
             "language": "en",
@@ -1783,368 +3163,1333 @@
               
             ]
           },
+          {
+            "text": "Course information provided by university of oxford",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course details of hull university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course details at birmingham university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "msc cloud computing course details at university of east london",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "MA education course details at northampton university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "business studies course information of coventry university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "coventry university faculty details",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "university of hull faculty information please",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "birmingham university tutors details",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "leicester university staff details",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "msc cloud computing faculty details at university od east london",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "msc computer science faculty information at peterborough university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "admission details at sheffield hallam university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "admission details at oxford university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "admission details at warwick university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "admission details at imperial college london",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "admission details at  university of Bristol",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
         
           {
-            "text": "What are the most popular graduate programs at University?",
+            "text": "admission details at university of Edinburg",
             "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": []
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "admission details at Manchester university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by university of sussex",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Oxford",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Cambridge",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by Imperial College London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Edinburgh",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Manchester",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by King's College London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Bristol",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
           },
           
+          {
+            "text": "course offered by University of Warwick",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Glasgow",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered byLondon School of Economics (LSE)",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by  University of Leeds",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Nottingham",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by  University of Southampton",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Newcastle",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by Cardiff University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by  University of Birmingham",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Sheffield",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by Durham University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of CambridgeUniversity of Liverpool",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University College London (UCL)",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Exeter",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Aberdeen",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of York",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered byUniversity of Bath",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of St Andrews",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Reading",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Leicester",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by  Queen Mary University of London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered byUniversity of Sussex",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Dundee",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of East Anglia (UEA)",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Kent",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "course offered by University of Surrey",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Strathclyde",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Loughborough",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Essex",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Plymouth",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Stirling",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Huddersfield",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Bedfordshire",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Winchester",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Wolverhampton",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Buckingham",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Chichester",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Gloucestershire",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Salford",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Central Lancashire (UCLan)",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Brighton",
+           
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Northumbria at Newcastle",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of the West of England (UWE Bristol)",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Bradford",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by  University of East London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Greenwich",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Hertfordshire",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of South Wales",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of West London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by  University of West Scotland",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
+          {
+            "text": "course offered by University of Worcestere",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of birmingham university",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Trinity Saint David",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Teesside",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Staffordshire",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Royal Holloway",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Robert Gordon",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Queen's",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Oxford Brookes",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Open",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Northumbria",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Kingston",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Heriot-Watt",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Glyndwr",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Bangor",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Aberystwyth",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of the West of Scotland",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of the Highlands and Islands",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Teesside University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Staffordshire University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Royal Holloway, University of London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Derby",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Robert Gordon University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Queen's University Belfast",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Oxford Brookes University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Open University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Northumbria University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Kingston University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Heriot-Watt University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Glyndwr University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Bangor University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of Aberystwyth University",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Ulster",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Swansea",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Newport",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales, Lampeter",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of Wales Trinity Saint David",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "may i know the faculty details of University of the Arts London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What's the process for applying as an overseas student to Imperial College London?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Tell me about the admissions office at the University of Bath.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How can I apply for a course at the University of York?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you explain the entry requirements for the University of Aberdeen?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the steps for admission to the University of Exeter?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How do I check the status of my application to the University of Winchester?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How do international students apply to University College London (UCL)?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Tell me about the admission criteria for the University of Liverpool.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What's the application fee for applying to Durham University?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How can I check if I'm eligible for the University of Sheffield?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What documents are needed for admission to the University of Birmingham?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you guide me through the application process at Cardiff University?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the requirements for admission to the University of Newcastle?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Tell me about the admission deadlines for the University of Southampton",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How do I apply for a program at the University of Nottingham?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Where can I find details about admission to the University of Leeds?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What's the process for applying to the London School of Economics (LSE)?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Tell me about the application procedure at the University of Glasgow.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How can I find out the admission criteria for the University of Warwick?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you provide information about admission at the University of Bristol?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the admission deadlines for King's College London?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How do I apply for a program at the University of Manchester?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the entry criteria for the University of Edinburgh?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Tell me about the application process at Imperial College London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the admission requirements for the University of Cambridge?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How can I apply for admission at the University of Oxford?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "what are the documents required for admission at King's College London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "what are the documents required for admission at University of Manchester",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "what are the documents required for admission at University of Edinburgh",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "what are the documents required for admission at Imperial College London",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "what are the documents required for admission at University of Cambridge",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What's the admission process for international students at the University of Bedfordshire?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Tell me about the documents required for admission to the University of Huddersfield.",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you guide me on submitting my application to the University of Stirling?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How can I find out if I'm eligible for a program at the University of Plymouth?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What's the process for admission to the University of Essex?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How do I apply for scholarships at the University of Loughborough?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What's the application timeline for the University of Strathclyde?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How can I get more information about admission to the University of Surrey?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the entry requirements for international students at the University of Kent?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Tell me about the admission interviews at the University of East Anglia (UEA).",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How do I apply for financial aid at the University of Dundee?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What are the admission tests required for the University of Sussex?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How do I provide letters of recommendation for Queen Mary University of London?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "What scholarships are available for admission to the University of Leicester?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "Can you clarify the admission procedures for the University of Reading?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+          {
+            "text": "How do I submit my application to the University of St Andrews?",
+            "language": "en",
+            "intent": "Not-related-to-UniversityOfLincoln",
+            "entities": [
+              
+            ]
+          },
+
           
-          {
-            "text": "What are the extracurricular activities available at University?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": []
-          },
-          {
-            "text": "What are the admission requirements for University?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": []
-          },
-          
-         
-          {
-            "text": "What is the campus life like at University?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": []
-          },
-          
-         
-          {
-            "text": "What are the research strengths of University?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What are the notable alumni University?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-        
-        
-          {
-            "text": "What is the cost of attendance at University?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What is the location of University?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "What is the location of University of Lincoln?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "list of courses",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "list of courses offered",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "list of courses offered in",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "what are the courses offered in your college?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "courses offered",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "courses offered in university of Lincoln",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-              
-            ]
-          },
-          {
-            "text": "courses you offer",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "branches available at your college?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "what are branches?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "what are the courses available?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "what are the branches available?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "can you tell me the courses available?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "can you tell me the branches available?",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Msc Computer science",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Msc Cloud Computing",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Mechanical engineering",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "Civil Engineering",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "medicine course at your college",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "MA education",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-              
-            ]
-          },
-          {
-            "text": "International Business",
-            "language": "en",
-            "intent": "related-to-UniversityOfLincoln",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Living cost in Lincoln for a university student",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "What are some affordable places to grab a meal near campus?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Can you recommend any part-time job opportunities around the university area?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "What's the best way to get around Lincoln without a car?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Are there any student discounts available for local attractions?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "How can I find roommates or student housing options in the city?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "What are some free or low-cost activities to do on weekends in Lincoln?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Where can I find good deals on textbooks or academic supplies?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Do you have any tips for budgeting as a university student in Lincoln?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Are there any nearby gyms or recreational facilities that offer student rates?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "What's the average monthly cost of utilities for a student living off-campus?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Where can I find affordable furniture and decor for my apartment near the university?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "What's the best way to manage my laundry as a student living in Lincoln?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Can you suggest any quiet study spots or libraries off-campus?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "Are there any local volunteering opportunities that students often participate in?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
-          {
-            "text": "What's the typical range of expenses for a student's monthly transportation in Lincoln?",
-            "language": "en",
-            "intent": "related-ButNotDirectly",
-            "entities": [
-             
-            ]
-          },
           {
             "text": "helloooo",
             "language": "en",
