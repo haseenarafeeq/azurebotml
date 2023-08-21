@@ -559,7 +559,7 @@ a.dropdown-toggle.icon-search {
 }
 
 body {
-  background-image: url("https://images.shiksha.com/mediadata/images/1535086083phpnFGvGd.jpeg");
+  /* background-image: url("https://scontent.fcok6-2.fna.fbcdn.net/v/t39.30808-6/360125504_664414165713723_8442052698147731306_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CdvCa_SDIQsAX-0cUei&_nc_ht=scontent.fcok6-2.fna&oh=00_AfBkykUTwk3yxYE3xwOyWKSmfzqDStTgEQSnun7Fy4it-A&oe=64E63A8D"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -595,11 +595,24 @@ body {
 }
 .LSTM-container {
   position: absolute;
-  right: 33%;
+  right: .5%;
   bottom: 0;
 }
 .NAIVE-container {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+table {
+  margin: auto;
+  font-size: 25px;
+  margin-top: 5%;
+  font-weight: 800;
+  border: 1px solid #fff;
+  color: black;
+  width: 70%;
+}
+td,th {
+  padding: 15px;
+  border: 8px solid #000;
 }

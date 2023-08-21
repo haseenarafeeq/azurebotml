@@ -16,6 +16,27 @@
 <body>
 
     <h2 style="text-align: center;" class="body-h2"> UNIVERSITY OF LINCOLN DEMO CHATBOT PORTAL</h2>
+    <h4 style="width: 50%;margin:auto;color:black;font-weight:800">
+        I am a chatbot designed to answer queries related to university of Lincoln admission enquiry, course information and location details. This chat will provide url for each predicted intent. All answers are subjected to university of Lincoln website.
+    </h4>
+    <table>
+        <thead>
+            <tr>
+            <th>Algorithm</th>
+            <th>Accurary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Naive</td>
+                <td id="naive-accuracy"></td>
+            </tr>
+            <tr>
+                <td>LSTM</td>
+                <td id="lstm-accuracy"></td>
+            </tr>
+        </tbody>
+    </table>
 
 
     <!-- Chat box markup -->
@@ -41,28 +62,6 @@
                         alt=""></button>
             </div>
         </div>
-        <div class="chat-container NAIVE-container" style="margin-left: 1%;">
-            <div class="chat-header">
-                <span>Chat Box Naïve bayes</span>
-                <img id="closeButton-NAIVE" src="./img/icons8-close-window-64.png" alt="">
-                <img id="minimizeButton-NAIVE" src="./img/icons8-compress-48.png" alt="">
-            </div>
-            <div class="chat-body-1" id="chat-body-1">
-
-            </div>
-            <div class="chat-footer" id="footer-naive">
-                <grammarly-editor-plugin>
-                    <input class="chat-input-1" id="chat-input-1" type="text" placeholder="Type your message"
-                        spellcheck="true" autocorrect="on" />
-                </grammarly-editor-plugin>
-
-                <div class="img-div">
-                    <img src="./img/icons8-send-message-90.png" id="send-icon-1" style="height:20px" alt="">
-                </div>
-                <button style="margin-left: 1%;" id="voice-search-button-1"><img style="height:10px" src="./img/mic.png"
-                        alt=""></button>
-            </div>
-        </div>
     </div>
 
 
@@ -73,26 +72,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@grammarly/editor-sdk?clientId=client_ACCZJfvJuhUtY5xy46XZbJ"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-
-let lstm = false;
+        let lstm = false;
         let question = '';
-        const NaiveContainer = document.querySelector('.NAIVE-container');
         const LSTMContainer = document.querySelector('.LSTM-container');
         const chatboxElement = document.querySelector('#chat-body');
-        const chatboxElement1 = document.querySelector('#chat-body-1');
         const userInputElement = document.querySelector('#chat-input');
-        const userInputElement1 = document.querySelector('#chat-input-1');
-        const closeButtonNAIVE = document.getElementById('closeButton-NAIVE');
-        const minimizeButtonNAIVE = document.getElementById('minimizeButton-NAIVE');
         const closeButtonLSTM = document.getElementById('closeButton-LSTM');
         const minimizeButtonLSTM = document.getElementById('minimizeButton-LSTM');
         const sendIcon = document.querySelector('#send-icon');
-        const sendIcon1 = document.querySelector('#send-icon-1');
-        const footerNaive = document.getElementById('footer-naive');
         const footerLSTM = document.getElementById('footer-LSTM');
+        const subjects = ['admission_details', 'course-information', 'location' ,'greeting']
         const closeButtons = {
             closeLSTM: false,
-            closeNAIVE: false
         }
         // Attach a click event to the close button
         closeButtonLSTM.addEventListener('click', (event) => {
@@ -103,33 +94,9 @@ let lstm = false;
         minimizeButtonLSTM.addEventListener('click', (event) => {
             colseAndMinimize(event, 'closeLSTM'); // Call your function here
         });
-        // Attach a click event to the close button
-        closeButtonNAIVE.addEventListener('click', (event) => {
-            colseAndMinimize(event, 'closeNAIVE'); // Call your function here
-        });
-
-        // Attach a click event to the minimize button
-        minimizeButtonNAIVE.addEventListener('click', (event) => {
-            colseAndMinimize(event, 'closeNAIVE'); // Call your function here
-        });
 
         function colseAndMinimize(event, button) {
             closeButtons[button] = !closeButtons[button];
-            if (closeButtons[button] && button === 'closeNAIVE') {
-                console.log('insie');
-                closeButtonNAIVE.style.display = 'none';
-                minimizeButtonNAIVE.style.display = 'inline';
-                footerNaive.style.display = 'none';
-                chatboxElement1.style.display = 'none';
-                NaiveContainer.style.height = '40px'
-            }
-            if (!closeButtons[button] && button === 'closeNAIVE') {
-                closeButtonNAIVE.style.display = 'inline';
-                minimizeButtonNAIVE.style.display = 'none';
-                footerNaive.style.display = 'flex';
-                chatboxElement1.style.display = 'block';
-                NaiveContainer.style.height = '400px'
-            }
             if (closeButtons[button] && button === 'closeLSTM') {
                 closeButtonLSTM.style.display = 'none';
                 minimizeButtonLSTM.style.display = 'inline';
@@ -149,8 +116,8 @@ let lstm = false;
             try {
                 let answer;
                 const url =
-                'https://uol-language-service.cognitiveservices.azure.com/language/:query-knowledgebases';
-                 
+                    'https://uol-language-service.cognitiveservices.azure.com/language/:query-knowledgebases';
+
                 const subscriptionKey = '149150bdbfce4d9c978abf44a0a7c879';
                 const projectName = 'uolbot';
                 const apiVersion = '2021-10-01';
@@ -173,8 +140,9 @@ let lstm = false;
             }
         }
         async function getIntents(query) {
-            const url = 'https://uol-language-service.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2022-10-01-preview';
-                
+            const url =
+                'https://uol-language-service.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2022-10-01-preview';
+
             const subscriptionKey = '149150bdbfce4d9c978abf44a0a7c879';
             const requestId = '4ffcac1c-b2fc-48ba-bd6d-b69d9942995a';
 
@@ -216,120 +184,79 @@ let lstm = false;
                     });
             })
         }
-        // async function getVoiceToTextAzure(query,auth) {
-        //     const url =
-        //         'https://eastus.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=en-US';
-        //     const subscriptionKey = '73ec4fd4cf024045b370ee39f72169d8';
-
-
-        //     const headers = {
-        //         'Ocp-Apim-Subscription-Key': subscriptionKey,
-        //         'Content-Type': 'audio/wav'
-        //     };
-
-        //     return new Promise((resolve, reject) => {
-        //         axios.post(url, data, {
-        //                 headers
-        //             })
-        //             .then(response => {
-        //                 let intent = response.data.result.prediction.intents[0].category;
-        //                 resolve(intent)
-        //             })
-        //             .catch(error => {
-        //                 console.error(error);
-        //                 reject(error)
-        //             });
-        //     })
-        // }
-        // async function getNewSpeechToken(query,auth) {
-        //     const url =
-        //         'https://eastus.api.cognitive.microsoft.com/sts/v1.0/issuetoken';
-        //     const subscriptionKey = '73ec4fd4cf024045b370ee39f72169d8';
-
-
-        //     const headers = {
-        //         'Ocp-Apim-Subscription-Key': subscriptionKey,
-        //         'Content-Type': 'audio/wav'
-        //     };
-
-        //     return new Promise((resolve, reject) => {
-        //         axios.post(url, data, {
-        //                 headers
-        //             })
-        //             .then(response => {
-        //                 let intent = response.data.result.prediction.intents[0].category;
-        //                 resolve(intent)
-        //             })
-        //             .catch(error => {
-        //                 console.error(error);
-        //                 reject(error)
-        //             });
-        //     })
-        // }
 
         getSpeechText();
 
         sendIcon.addEventListener('click', onClickSendIcon);
-        sendIcon1.addEventListener('click', onClickSendIcon);
-
         userInputElement.addEventListener('keydown', onEnter);
-        userInputElement1.addEventListener('keydown', onEnter);
         async function onEnter(event) {
             if (event.key === 'Enter') {
                 console.log(event);
                 let id = event.srcElement.id;
                 let userMessage;
-                if (id === 'chat-input-1') {
-                    lstm = false;
-                    userMessage = userInputElement1.value;
-                } else {
-                    lstm = true;
-                    userMessage = userInputElement.value;
-                }
+                lstm = true;
+                userMessage = userInputElement.value;
                 question = userMessage;
                 addMessage(userMessage, 'user-message');
-                if (!lstm) userInputElement1.value = '';
-                else userInputElement.value = '';
+                userInputElement.value = '';
                 getIntents(userMessage).
                 then(async res => {
-                    console.log(res,'response');
-                    if (res === 'Not-related-to-UniversityOfLincoln') {
-                        let message =
-                            "To answer this question is beyond my ability.";
-                        addMessage(message, 'bot-message');
-                    } else {
-                        // Simulate bot response (replace with your own logic to retrieve the answer)
-                        await getChat(userMessage);
-                    }
-                });
+                        console.log(res, 'response');
+                        if (res === 'Not-related-to-UniversityOfLincoln') {
+                            let message =
+                                "I am a chat bot designed to answer queries related to admission,location,course information at University of Lincoln for post graduate students.";
+                            addMessage(message, 'bot-message');
+                        } else {
+                            // Simulate bot response (replace with your own logic to retrieve the answer)
+                            let naiveIntent = await getNaiveResponse(question);
+                            let intentMsg = 'You have asked about ' + naiveIntent;
+                             addMessage(intentMsg, 'bot-message');
+                            if (subjects.includes(naiveIntent)) {
+                                await getChat(userMessage);
+                            } else {
+                                let message =
+                                    "I am a chat bot designed to answer queries related to admission,location,course information at University of Lincoln for post graduate students.";
+                                addMessage(message, 'bot-message');
+                            }
+                        }
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
             }
         }
         async function onClickSendIcon(event) {
             let id = event.srcElement.id;
             let userMessage;
-            if (id === 'send-icon-1') {
-                lstm = false;
-                userMessage = userInputElement1.value;
-            } else {
-                lstm = true;
-                userMessage = userInputElement1.value;
-            }
+            lstm = true;
+            userMessage = userInputElement.value;
             question = userMessage;
             addMessage(userMessage, 'user-message');
-            if (!lstm) userInputElement1.value = '';
-            else userInputElement.value = '';
+            userInputElement.value = '';
             getIntents(userMessage).
             then(async res => {
-                console.log(res,'response intend');
-                if (res === 'Not-related-to-UniversityOfLincoln') {
-                    let message =
-                        "To answer this question is beyond my ability.";
-                    addMessage(message, 'bot-message');
-                } else {
-                    // Simulate bot response (replace with your own logic to retrieve the answer)
-                    await getChat(userMessage);
-                }
-            });
+                    console.log(res, 'response');
+                    if (res === 'Not-related-to-UniversityOfLincoln') {
+                        let message =
+                            "I am a chat bot designed to answer queries related to admission,location,course information at University of Lincoln for post graduate students.";
+                        addMessage(message, 'bot-message');
+                    } else {
+                        // Simulate bot response (replace with your own logic to retrieve the answer)
+                        let naiveIntent = await getNaiveResponse(question);
+                        let intentMsg = 'You have asked about ' + naiveIntent;
+                        addMessage(intentMsg, 'bot-message');
+                        if (subjects.includes(naiveIntent)) {
+                            await getChat(userMessage);
+                        } else {
+                            let message =
+                                "I am a chat bot designed to answer queries related to admission,location,course information at University of Lincoln for post graduate students.";
+                            addMessage(message, 'bot-message');
+                        }
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
         }
 
         function convertUrlsToLinks(message) {
@@ -366,33 +293,56 @@ let lstm = false;
                     console.log(response.data.answers);
                     let answer = response.data.answers[0].answer;
                     console.log(answer)
-                    if(answer === 'I am a chatbot designed to answer queries related to admission faculty info and location') {
-                        let algorithm = lstm ? 'LSTM':null
-                        getMlResponse(question,algorithm)
+                    if (answer ===
+                        'I am a chatbot designed to answer queries related to admission faculty info and location'
+                    ) {
+                        let algorithm = lstm ? 'LSTM' : null
+                        getMlResponse(question, algorithm)
                     } else {
                         addMessage(answer, 'bot-message');
                     }
-                    
+
                 })
                 .catch(error => {
                     console.error(error);
                 });
         }
 
-        function getMlResponse(question,algorithm) {
+        function getMlResponse(question, algorithm) {
             axios.get(
                     `http://localhost:8080/answer?question=${question}&algorithm=${algorithm}`,
-                   )
+                )
                 .then(data => {
                     console.log(data.data.response);
                     let answer = data.data.response;
+                    let accuracy  =  data.data.accuracy;
+                    document.getElementById('lstm-accuracy').innerText = accuracy + '%'
                     addMessage(answer, 'bot-message');
                 })
                 .catch(error => {
                     console.error(error);
                 });
         }
-  
+
+        function getNaiveResponse(question, algorithm) {
+            return new Promise((resolve, reject) => {
+                axios.get(
+                        `http://localhost:8080/answer?question=${question}`,
+                    )
+                    .then(data => {
+                        console.log(data.data.response);
+                        let intent = data.data.response;
+                        let accuracy  =  data.data.accuracy;
+                        document.getElementById('naive-accuracy').innerText = accuracy + '%'
+                        resolve(intent);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        reject(error);
+                    });
+            })
+        }
+
         function getSpeechText() {
             // Check if the browser supports the Web Speech API
             isLSTM = false;
@@ -409,11 +359,8 @@ let lstm = false;
                     // Handle speech recognition results
                     recognition.onresult = function (event) {
                         const transcript = event.results[0][0].transcript;
-                        const userInputElement1 = document.querySelector('.chat-input-1');
                         const userInputElement = document.querySelector('.chat-input');
-
-                        if (!isLSTM) userInputElement1.value = transcript;
-                        else userInputElement.value = transcript;
+                        userInputElement.value = transcript;
 
                         recognition.stop();
                     };
@@ -426,15 +373,8 @@ let lstm = false;
 
                 // Call the createRecognition function to set up the initial recognition object
                 createRecognition();
-
-                const voiceSearchButton1 = document.querySelector('#voice-search-button-1');
                 const voiceSearchButton = document.querySelector('#voice-search-button');
 
-                // Add event listeners to both voice search buttons
-                voiceSearchButton1.addEventListener('click', function (event) {
-                    isLSTM = false;
-                    recognition.start();
-                });
                 voiceSearchButton.addEventListener('click', function (event) {
                     isLSTM = true;
                     recognition.start();
@@ -449,7 +389,7 @@ let lstm = false;
             }
         }
     </script>
-    
+
 </body>
 
 
