@@ -17,13 +17,15 @@
 
     <h2 style="text-align: center;" class="body-h2"> UNIVERSITY OF LINCOLN DEMO CHATBOT PORTAL</h2>
     <h4 style="width: 50%;margin:auto;color:black;font-weight:800">
-        I am a chatbot designed to answer queries related to university of Lincoln admission enquiry, course information and location details. This chat will provide url for each predicted intent. All answers are subjected to university of Lincoln website.
+        I am a chatbot designed to answer queries related to university of Lincoln admission enquiry, course information
+        and location details. This chat will provide url for each predicted intent. All answers are subjected to
+        university of Lincoln website.
     </h4>
     <table>
         <thead>
             <tr>
-            <th>Algorithm</th>
-            <th>Accurary</th>
+                <th>Algorithm</th>
+                <th>Accurary</th>
             </tr>
         </thead>
         <tbody>
@@ -81,7 +83,7 @@
         const minimizeButtonLSTM = document.getElementById('minimizeButton-LSTM');
         const sendIcon = document.querySelector('#send-icon');
         const footerLSTM = document.getElementById('footer-LSTM');
-        const subjects = ['admission_details', 'course-information', 'location' ,'greeting']
+        const subjects = ['admission_details', 'course-information', 'location', 'greetings']
         const closeButtons = {
             closeLSTM: false,
         }
@@ -209,15 +211,16 @@
                         } else {
                             // Simulate bot response (replace with your own logic to retrieve the answer)
                             let naiveIntent = await getNaiveResponse(question);
-                            let intentMsg = 'You have asked about ' + naiveIntent;
-                             addMessage(intentMsg, 'bot-message');
                             if (subjects.includes(naiveIntent)) {
-                                await getChat(userMessage);
-                            } else {
-                                let message =
-                                    "I am a chat bot designed to answer queries related to admission,location,course information at University of Lincoln for post graduate students.";
-                                addMessage(message, 'bot-message');
+                                let intentMsg = 'You have asked about ' + naiveIntent;
+                                addMessage(intentMsg, 'bot-message');
                             }
+                            await getChat(userMessage);
+                            // } else {
+                            //     let message =
+                            //         "I am a chat bot designed to answer queries related to admission,location,course information at University of Lincoln for post graduate students.";
+                            //     addMessage(message, 'bot-message');
+                            // }
                         }
                     })
                     .catch((err) => {
@@ -243,15 +246,11 @@
                     } else {
                         // Simulate bot response (replace with your own logic to retrieve the answer)
                         let naiveIntent = await getNaiveResponse(question);
-                        let intentMsg = 'You have asked about ' + naiveIntent;
-                        addMessage(intentMsg, 'bot-message');
                         if (subjects.includes(naiveIntent)) {
-                            await getChat(userMessage);
-                        } else {
-                            let message =
-                                "I am a chat bot designed to answer queries related to admission,location,course information at University of Lincoln for post graduate students.";
-                            addMessage(message, 'bot-message');
+                            let intentMsg = 'You have asked about ' + naiveIntent;
+                            addMessage(intentMsg, 'bot-message');
                         }
+                        await getChat(userMessage);
                     }
                 })
                 .catch((err) => {
@@ -294,7 +293,7 @@
                     let answer = response.data.answers[0].answer;
                     console.log(answer)
                     if (answer ===
-                        'I am a chatbot designed to answer queries related to admission faculty info and location'
+                        'I am a chatbot designed to answer queries related to admission, course information and location'
                     ) {
                         let algorithm = lstm ? 'LSTM' : null
                         getMlResponse(question, algorithm)
@@ -315,7 +314,7 @@
                 .then(data => {
                     console.log(data.data.response);
                     let answer = data.data.response;
-                    let accuracy  =  data.data.accuracy;
+                    let accuracy = data.data.accuracy;
                     document.getElementById('lstm-accuracy').innerText = accuracy + '%'
                     addMessage(answer, 'bot-message');
                 })
@@ -332,7 +331,7 @@
                     .then(data => {
                         console.log(data.data.response);
                         let intent = data.data.response;
-                        let accuracy  =  data.data.accuracy;
+                        let accuracy = data.data.accuracy;
                         document.getElementById('naive-accuracy').innerText = accuracy + '%'
                         resolve(intent);
                     })
