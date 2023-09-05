@@ -614,6 +614,30 @@
           ]
         },
         {
+          "text": "can i get the way to uni",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "course details of uni",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "uni details please",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
           "text": "Is it possible to change my major after I've been admitted?",
           "language": "en",
           "intent": "related-to-UniversityOfLincoln",
@@ -839,6 +863,14 @@
         },
         {
           "text": "What is the location of University?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+            
+          ]
+        },
+        {
+          "text": "May I know college location please?",
           "language": "en",
           "intent": "related-to-UniversityOfLincoln",
           "entities": [
@@ -1080,6 +1112,38 @@
         },
         {
           "text": "How do I cancel my application to the University of Lincoln?",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Msc cloud computing course information please",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Msc cloud computing course at university of lincoln",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Msc computer science course at university of lincoln",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "Msc computer science course information please",
           "language": "en",
           "intent": "related-to-UniversityOfLincoln",
           "entities": [
@@ -1760,6 +1824,23 @@
            
           ]
         },
+        {
+          "text": "can i get location of university please",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        {
+          "text": "may i know the map to the university",
+          "language": "en",
+          "intent": "related-to-UniversityOfLincoln",
+          "entities": [
+           
+          ]
+        },
+        
         {
           "text": "How do I appeal an admission decision from the University of Lincoln?",
           "language": "en",

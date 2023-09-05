@@ -15,13 +15,11 @@
 
 <body>
 
-    <h2 style="text-align: center;" class="body-h2"> UNIVERSITY OF LINCOLN DEMO CHATBOT PORTAL</h2>
+    <h2 style="text-align: center;" class="body-h2"> UNIVERSITY DEMO CHATBOT PORTAL</h2>
     <h4 style="width: 50%;margin:auto;color:black;font-weight:800">
-        I am a chatbot designed to answer queries related to university of Lincoln admission enquiry, course information
-        and location details. This chat will provide url for each predicted intent. All answers are subjected to
-        university of Lincoln website.
+        I am a chatbot designed to answer frequently asked queries in a college environment
     </h4>
-    <table>
+    <!-- <table>
         <thead>
             <tr>
                 <th>Algorithm</th>
@@ -38,7 +36,7 @@
                 <td id="lstm-accuracy"></td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
 
 
     <!-- Chat box markup -->
@@ -83,7 +81,7 @@
         const minimizeButtonLSTM = document.getElementById('minimizeButton-LSTM');
         const sendIcon = document.querySelector('#send-icon');
         const footerLSTM = document.getElementById('footer-LSTM');
-        const subjects = ['admission_details', 'course-information', 'location', 'greetings']
+        const subjects = ['admission_details', 'course-information', 'location', 'greetings', 'goodbye']
         const closeButtons = {
             closeLSTM: false,
         }
@@ -118,12 +116,11 @@
             try {
                 let answer;
                 const url =
-                    'https://uol-language-service.cognitiveservices.azure.com/language/:query-knowledgebases';
-
-                const subscriptionKey = '149150bdbfce4d9c978abf44a0a7c879';
-                const projectName = 'uolbot';
+                    'https://uol-botlanguage.cognitiveservices.azure.com/language/:query-knowledgebases';
+                const subscriptionKey = '2e0ee513a14342ad918342d3418389f5';
+                const projectName = 'uolbotproject';
                 const apiVersion = '2021-10-01';
-                const deploymentName = 'test';
+                const deploymentName = 'production';
 
                 const data = {
                     top: 3,
@@ -143,9 +140,10 @@
         }
         async function getIntents(query) {
             const url =
-                'https://uol-language-service.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2022-10-01-preview';
+                   'https://uol-botlanguage.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2022-10-01-preview';
+                
 
-            const subscriptionKey = '149150bdbfce4d9c978abf44a0a7c879';
+            const subscriptionKey = '2e0ee513a14342ad918342d3418389f5';
             const requestId = '4ffcac1c-b2fc-48ba-bd6d-b69d9942995a';
 
             const headers = {
@@ -268,13 +266,8 @@
             const messageElement = document.createElement('div');
             messageElement.innerHTML = convertUrlsToLinks(message);
             messageElement.classList.add('message', className);
-            if (!lstm) {
-                chatboxElement1.appendChild(messageElement);
-                chatboxElement1.scrollTop = chatboxElement.scrollHeight;
-            } else {
-                chatboxElement.appendChild(messageElement);
-                chatboxElement.scrollTop = chatboxElement.scrollHeight;
-            }
+            chatboxElement.appendChild(messageElement);
+            chatboxElement.scrollTop = chatboxElement.scrollHeight;
 
 
         }
@@ -293,7 +286,7 @@
                     let answer = response.data.answers[0].answer;
                     console.log(answer)
                     if (answer ===
-                        'I am a chatbot designed to answer queries related to admission, course information and location'
+                        'I am sorry, I could not understand you, can you ask again in a different way'
                     ) {
                         let algorithm = lstm ? 'LSTM' : null
                         getMlResponse(question, algorithm)
@@ -315,7 +308,7 @@
                     console.log(data.data.response);
                     let answer = data.data.response;
                     let accuracy = data.data.accuracy;
-                    document.getElementById('lstm-accuracy').innerText = accuracy + '%'
+                    // document.getElementById('lstm-accuracy').innerText = accuracy + '%'
                     addMessage(answer, 'bot-message');
                 })
                 .catch(error => {
@@ -332,7 +325,7 @@
                         console.log(data.data.response);
                         let intent = data.data.response;
                         let accuracy = data.data.accuracy;
-                        document.getElementById('naive-accuracy').innerText = accuracy + '%'
+                        // document.getElementById('naive-accuracy').innerText = accuracy + '%'
                         resolve(intent);
                     })
                     .catch(error => {
